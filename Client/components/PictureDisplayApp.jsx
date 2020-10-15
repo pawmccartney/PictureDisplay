@@ -69,7 +69,8 @@ class PictureDisplayApp extends React.Component {
       flexedPics: [],
       sentUrl: '',
       isFullSize: false,
-      windowOpen: false
+      windowOpen: false,
+      hotelId: ''
     }
   }
 

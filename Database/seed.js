@@ -52,12 +52,21 @@ const seed = () => {
     for (let x = 1; x <= length; x++) {
       let imageNum = arrayOfRandom.pop();
       let image = {};
-      image.imgMainUrl = `https://tripadcoba.s3-us-west-1.amazonaws.com/main${imageNum}.jpg`;
-      image.imgFullUrl = `https://tripadcoba.s3-us-west-1.amazonaws.com/full${imageNum}.jpg`;
-      image.imgThumbUrl = `https://tripadcoba.s3-us-west-1.amazonaws.com/thumb${imageNum}.jpg`;
-      mainImgSizeArray.push(`https://tripadcoba.s3-us-west-1.amazonaws.com/main${imageNum}.jpg`);
-      fullSizeArray.push(`https://tripadcoba.s3-us-west-1.amazonaws.com/full${imageNum}.jpg`);
-      thumbnailArray.push(`https://tripadcoba.s3-us-west-1.amazonaws.com/thumb${imageNum}.jpg`);
+
+      // === OLD AWS LINKS ===
+      // image.imgMainUrl = `https://tripadcoba.s3-us-west-1.amazonaws.com/main${imageNum}.jpg`;
+      // image.imgFullUrl = `https://tripadcoba.s3-us-west-1.amazonaws.com/full${imageNum}.jpg`;
+      // image.imgThumbUrl = `https://tripadcoba.s3-us-west-1.amazonaws.com/thumb${imageNum}.jpg`;
+      // mainImgSizeArray.push(`https://tripadcoba.s3-us-west-1.amazonaws.com/main${imageNum}.jpg`);
+      // fullSizeArray.push(`https://tripadcoba.s3-us-west-1.amazonaws.com/full${imageNum}.jpg`);
+      // thumbnailArray.push(`https://tripadcoba.s3-us-west-1.amazonaws.com/thumb${imageNum}.jpg`);
+
+      image.imgMainUrl = 'https://hrr48sdc.s3-us-west-1.amazonaws.com/hotel1_main.jpeg';
+      image.imgFullUrl = 'https://hrr48sdc.s3-us-west-1.amazonaws.com/hotel1_full.jpeg';
+      image.imgThumbUrl = 'https://hrr48sdc.s3-us-west-1.amazonaws.com/hotel1_thumb.jpeg';
+      mainImgSizeArray.push('https://hrr48sdc.s3-us-west-1.amazonaws.com/hotel1_main.jpeg');
+      fullSizeArray.push('https://hrr48sdc.s3-us-west-1.amazonaws.com/hotel1_full.jpeg');
+      thumbnailArray.push('https://hrr48sdc.s3-us-west-1.amazonaws.com/hotel1_thumb.jpeg');
 
       image.uploadDate = new Date();
       image.user = faker.name.firstName() + faker.name.lastName();
