@@ -9,7 +9,9 @@
     "start": "nodemon Server/server.js",
     "seeddb": "node Database/seed.js",
     "build": "webpack -d --watch",
-    "server": "node Server/server.js"
+    "server": "node Server/server.js",
+    "deletedata": "node Database/deleteData.js",
+    "viewdata": "node Database/viewData.js"
   },
   "jest": {
     "verbose": true,
@@ -41,6 +43,7 @@
     "jquery": "^3.5.1",
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.6",
+    "mongouri": "0.0.0",
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

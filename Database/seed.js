@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const db = require('./db.js');
 const faker = require('faker');
 const _ = require('underscore');
-const mongoUri = require('./mongouri.js');
+const uri = 'mongodb://localhost/4000';
 const Hotel = require('./Photo.js');
 
-mongoose.connect(mongoUri, {
+mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }, (err) => {

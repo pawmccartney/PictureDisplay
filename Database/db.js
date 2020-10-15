@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-const mongoUri = require('./mongouri.js');
-mongoose.connect(mongoUri, {useNewUrlParser: true, useUnifiedTopology: true });
+const uri = 'mongodb://localhost/4000';
 
-const db = mongoose.connect(mongoUri);
+const db = mongoose.connect(uri,  { useNewUrlParser: true, useUnifiedTopology: true });
 
 module.exports = db;
