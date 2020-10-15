@@ -22,7 +22,7 @@ app.get('/api/pictures/:hotel', (req, res) => {
   })
 })
 
-app.get('/hotels', ( req, res ) => {
+app.get('/api/hotels', ( req, res ) => {
   Hotel.find({})
   .then( (result) => {
     res.send(result);
