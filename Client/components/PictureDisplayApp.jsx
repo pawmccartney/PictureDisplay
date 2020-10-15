@@ -338,6 +338,7 @@ class PictureDisplayApp extends React.Component {
       method: 'GET'
     })
     .then((res) => {
+      console.log('res.data - ', res.data)
       this.setHotelState(res.data[0]);
       this.setUpPhotoStates(res.data[0]);
       this.setUpUserState(res.data[0]);
