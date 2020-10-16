@@ -23,7 +23,7 @@ app.get('/api/pictures/:hotel', (req, res) => {
   })
 })
 
-// RETURNS ALL HOTELS IN DB
+// READ ALL HOTELS IN DB
 app.get('/api/hotels', ( req, res ) => {
   Hotel.find({})
   .then( (result) => {

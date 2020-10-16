@@ -49,3 +49,28 @@ Possible issues (don't allow these to happen):
 This module is a complex beast but if you feed it what it wants, it should do your bidding.
 
 If you have any issues not associated with what has been listed on this page, please contact the developer: Susannah Marcus
+
+==============================================
+The following section of this README was written by Jason Strunk for his SDC Project - HRR48 10/15/2020
+
+CRUD Operations for the MongoDB Database are as follows.
+
+Create -
+  Request Type : POST
+  Endpoint : /api/hotels
+  Body : expects a JSON object that follows the schema as outlined in Database/Photo.js
+
+Read -
+  Request Type : GET
+  Endpoint : /api/hotels
+  Body : N/A
+
+Update -
+  Request Type : PATCH
+  Endpoint : /api/hotels/:hotelId
+  Body : expects a JSON object that follows the schema as outlined in Database/Photo.js
+
+Delete -
+  Request Type : DELETE
+  Endpoint : /api/hotels/:hotelId
+  Body : N/A (This request will delete the entry that matches {name: hotelId})
