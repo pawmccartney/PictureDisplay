@@ -14,6 +14,7 @@ app.use(express.static(__dirname + '/../public/'));
 app.use('/:hotelId', express.static(__dirname + '/../public/'));
 app.use(express.json());
 
+// SERVES DATA TO CLIENT
 app.get('/api/pictures/:hotel', (req, res) => {
   let data = req.params.hotel;
   Hotel.find({ name: data})
@@ -22,6 +23,7 @@ app.get('/api/pictures/:hotel', (req, res) => {
   })
 })
 
+// RETURNS ALL HOTELS IN DB
 app.get('/api/hotels', ( req, res ) => {
   Hotel.find({})
   .then( (result) => {
@@ -29,6 +31,7 @@ app.get('/api/hotels', ( req, res ) => {
   })
 })
 
+// ADDS A HOTEL TO THE DB
 app.post('/api/hotels', ( req, res ) => {
   Hotel.create(req.body)
   .then( function(result) {
@@ -36,6 +39,7 @@ app.post('/api/hotels', ( req, res ) => {
   })
 })
 
+// DB METHOD FOR DELETE
 const deleteHotel = function(hotelName, callback) {
   return Hotel.deleteOne(hotelName, (error, result) => {
     if (error) {callback(error)};
@@ -43,6 +47,7 @@ const deleteHotel = function(hotelName, callback) {
   })
 };
 
+// DELETES A HOTEL FROM THE DB
 app.delete('/api/hotels/:hotelId', (req, res) => {
   deleteHotel({name: req.params.hotelId}, (error, result) => {
     if (error) {
@@ -50,6 +55,25 @@ app.delete('/api/hotels/:hotelId', (req, res) => {
     } else {
       res.status(200).send(result);
     }
+  })
+})
+
+// MyModel.findOneAndUpdate(query, req.newData, {upsert: true}, function(err, doc) {
+//   if (err) return res.send(500, {error: err});
+//   return res.send('Succesfully saved.');
+// })
+
+const updateHotel = function(hotelName, update, callback) {
+  return Hotel.findOneAndUpdate(hotelName, update, function(err, result) {
+    if (err) {callback(error)}
+    callback(result);
+  })
+}
+
+app.patch('/api/hotels/:hotelId', function(req, res) {
+  updateHotel({name: req.params.hotelId}, req.body, function(err, result) {
+    if (err) return res.status(500).send();
+    return res.send('Succesfully saved.');
   })
 })
 
