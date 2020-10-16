@@ -29,10 +29,27 @@ app.get('/api/hotels', ( req, res ) => {
   })
 })
 
-app.post('/', ( req, res ) => {
+app.post('/api/hotels', ( req, res ) => {
   Hotel.create(req.body)
   .then( function(result) {
     res.send(result);
+  })
+})
+
+const deleteHotel = function(hotelName, callback) {
+  return Hotel.deleteOne(hotelName, (error, result) => {
+    if (error) {callback(error)};
+    callback(null, result);
+  })
+};
+
+app.delete('/api/hotels/:hotelId', (req, res) => {
+  deleteHotel({name: req.params.hotelId}, (error, result) => {
+    if (error) {
+      res.sendStatus(400);
+    } else {
+      res.status(200).send(result);
+    }
   })
 })
 
