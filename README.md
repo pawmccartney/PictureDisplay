@@ -51,6 +51,7 @@ This module is a complex beast but if you feed it what it wants, it should do yo
 If you have any issues not associated with what has been listed on this page, please contact the developer: Susannah Marcus
 
 ==============================================
+
 The following section of this README was written by Jason Strunk for his SDC Project - HRR48 10/15/2020
 
 CRUD Operations for the MongoDB Database are as follows.
