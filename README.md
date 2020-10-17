@@ -61,7 +61,7 @@ Create -
   Endpoint : /api/hotels
   Body : expects a JSON object that follows the schema as outlined in Database/Photo.js
 
-Read -
+Read (All)-
   Request Type : GET
   Endpoint : /api/hotels
   Body : N/A

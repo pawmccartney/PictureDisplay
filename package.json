@@ -11,7 +11,8 @@
     "build": "webpack -d --watch",
     "server": "node Server/server.js",
     "deletedata": "node Database/deleteData.js",
-    "viewdata": "node Database/viewData.js"
+    "viewdata": "node Database/viewData.js",
+    "generate": "node Database/generator.js"
   },
   "jest": {
     "verbose": true,
