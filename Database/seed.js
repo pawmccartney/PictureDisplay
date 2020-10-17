@@ -61,6 +61,8 @@ const seed = () => {
       // fullSizeArray.push(`https://tripadcoba.s3-us-west-1.amazonaws.com/full${imageNum}.jpg`);
       // thumbnailArray.push(`https://tripadcoba.s3-us-west-1.amazonaws.com/thumb${imageNum}.jpg`);
 
+      // https://hrr48sdc.s3-us-west-1.amazonaws.com/business-${imageNum}.jpg
+
       image.imgMainUrl = 'https://hrr48sdc.s3-us-west-1.amazonaws.com/hotel1_main.jpeg';
       image.imgFullUrl = 'https://hrr48sdc.s3-us-west-1.amazonaws.com/hotel1_full.jpeg';
       image.imgThumbUrl = 'https://hrr48sdc.s3-us-west-1.amazonaws.com/hotel1_thumb.jpeg';
