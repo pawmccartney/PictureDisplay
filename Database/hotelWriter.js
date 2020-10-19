@@ -35,7 +35,7 @@ writeHotels.write('name,fullPhotos,mainPhotos, thumbnailPhotos, users, tags\n', 
 
 
 function writeAllHotels(writer, encoding, callback) {
-  let i = 100;
+  let i = 10000000;
   let id = 0;
   function write() {
     let ok = true;
@@ -53,7 +53,7 @@ function writeAllHotels(writer, encoding, callback) {
 
       const data = `hotel${id},${fullPhotos},${mainPhotos},${thumbnailPhotos}, ${users}, ${tags}\n`;
 
-      console.log('writing...')
+      console.log('writing... - ' + i + ' records remaining.')
       if (i === 0) {
         writer.write(data, encoding, callback);
       } else {
