@@ -17,7 +17,7 @@ To see a gif of how this should look when it is working properly, please see: ht
 
 This is a complicated module, but the main takeaway with working around it is knowing the correct format of the data you should be sending to the client side. For this, please note that it is calibrated to accept adocument from a mongoDB database to have the following information:
   name: String,
-  FullPhotos: Array,
+  FullPhotos: Array ,
   MainPhotos: Array,
   ThumbnailPhotos: Array,
   users: Array,
